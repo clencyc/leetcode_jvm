@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.HashMap;
 
+
 class TwoSum {
     public static void main(String[] args) {
         System.out.println("Hello World");
@@ -37,12 +38,12 @@ class TwoSum {
                     System.out.println("Match Found");
                     System.out.println("Indices: [" + i + ", " + j + "]");
                     found = true;
-//                    break;
+                    break;
                 }
             }
 
-//            if (found)
-//                break;
+            if (found)
+                break;
         }
 
         if (!found)
@@ -59,7 +60,7 @@ class TwoSum {
             if (map.containsKey(complement)) {
                 System.out.println("Match Found");
                 System.out.println("Indices: [" + map.get(complement) + ", " + i + "]");
-//                return;
+                return;
             }
 
             map.put(nums[i], i);
