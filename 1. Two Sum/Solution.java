@@ -6,8 +6,9 @@ public class Solution {
         Map<Integer, Integer> twosum = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
-            if (twosum.containsKey(complement)) {
-                return new int[]{twosum.get(complement), i};
+            Integer complementIndex = twosum.get(complement);
+            if (complementIndex != null) {
+                return new int[]{complementIndex, i};
             }
             twosum.put(nums[i], i);
         }
